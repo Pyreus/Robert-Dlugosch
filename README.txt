@@ -1,0 +1,1 @@
+V9: V8-Struktur und Design beibehalten. Wording entdoppelt: Profile = Identität, Stärken = Fähigkeiten, Approach = Arbeitslogik, Beispiele = Anwendung, Werdegang = Entwicklung.

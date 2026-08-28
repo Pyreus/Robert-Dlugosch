@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robert Dlugosch | Business Development & Strategic Sales</title>
+<meta name="description" content="Robert Dlugosch – Business Development Manager mit Fokus auf strategischen B2B-Vertrieb, KRITIS, Defence und Industrie.">
+<meta name="theme-color" content="#eef2f5">
+<meta property="og:title" content="Robert Dlugosch | Business Development & Strategic Sales">
+<meta property="og:description" content="Strategisches Business Development an der Schnittstelle von Markt, Account und kommerzieller Umsetzung.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/robert-dlugosch.jpg">
+
+<style>
+:root{
+  --paper:#eef2f5;
+  --paper2:#e4e9ed;
+  --paper3:#f8fafb;
+  --navy:#08263f;
+  --navy2:#123a59;
+  --steel:#637788;
+  --steel2:#94a5b3;
+  --blue:#1f77b4;
+  --blueSoft:#d8e8f3;
+  --ink:#122637;
+  --muted:#5b6b78;
+  --line:rgba(20,32,51,.14);
+  --lineDark:rgba(255,255,255,.12);
+  --white:#ffffff;
+  --max:1180px;
+  --ease:cubic-bezier(.2,.78,.2,1);
+  --shadow:0 28px 90px rgba(20,32,51,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+::selection{background:var(--blue);color:white}
+.container{width:min(calc(100% - 42px),var(--max));margin-inline:auto}
+.progress{position:fixed;z-index:150;left:0;top:0;height:2px;width:0;background:var(--blue)}
+.section{padding:108px 0;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:11px;
+  text-transform:uppercase;letter-spacing:.15em;font-size:.73rem;font-weight:800;color:var(--blue)
+}
+.eyebrow:before{content:"";width:32px;height:1px;background:currentColor}
+.display{
+  margin:0;font-size:clamp(4rem,8.7vw,8.2rem);line-height:.9;letter-spacing:-.066em;font-weight:650
+}
+.display .thin{font-weight:300}
+.h2{
+  margin:0;font-size:clamp(2.55rem,5.2vw,5rem);line-height:1;letter-spacing:-.05em;font-weight:600
+}
+.h3{margin:0;font-size:clamp(1.4rem,2.1vw,2rem);line-height:1.08;letter-spacing:-.03em}
+.lead{font-size:clamp(1.08rem,1.6vw,1.3rem);line-height:1.62;color:#536072;max-width:760px}
+.micro{text-transform:uppercase;letter-spacing:.13em;font-size:.71rem;color:var(--steel);font-weight:760}
+.reveal{opacity:0;transform:translateY(18px);transition:.72s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+[data-delay="1"]{transition-delay:.08s}
+[data-delay="2"]{transition-delay:.16s}
+
+/* navigation */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(248,250,251,.88);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(20,32,51,.08)
+}
+.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{font-size:.9rem;font-weight:840;letter-spacing:.11em;text-transform:uppercase}
+.nav-links{display:flex;gap:27px;align-items:center;font-size:.87rem;color:#526071}
+.nav-links a{position:relative;padding:8px 0;transition:.25s}
+.nav-links a:before{
+  content:"";position:absolute;width:5px;height:5px;border:1px solid var(--blue);border-radius:50%;
+  left:-12px;top:50%;transform:translateY(-50%) scale(.2);opacity:0;transition:.25s var(--ease)
+}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-links a:hover:before,.nav-links a.active:before{opacity:1;transform:translateY(-50%) scale(1)}
+.nav-mail{font-weight:720;display:flex;gap:8px;align-items:center}
+.nav-mail:after{content:"↗"}
+.menu{display:none;border:0;background:none;color:var(--navy);font-size:1.45rem}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden;
+  min-height:50px;padding:0 20px;border-radius:999px;border:1px solid rgba(20,32,51,.2);
+  font-size:.9rem;font-weight:730;transition:.26s var(--ease)
+}
+.btn:after{
+  content:"";position:absolute;width:88px;height:88px;border:1px solid currentColor;border-radius:50%;
+  right:-68px;bottom:-70px;opacity:.3;transition:.45s var(--ease)
+}
+.btn:hover{transform:translateY(-2px);border-color:rgba(20,32,51,.38)}
+.btn:hover:after{transform:scale(1.9)}
+.btn-primary{background:var(--navy);border-color:var(--navy);color:white}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+
+/* hero */
+.hero{
+  min-height:100vh;padding:145px 0 82px;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:
+    radial-gradient(700px circle at var(--mx,72%) var(--my,22%),rgba(31,119,180,.13),transparent 49%),
+    linear-gradient(135deg,#f8fafb 0%,#edf2f5 56%,#dfe9f1 100%);
+}
+.hero:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.34;
+  background-image:
+    linear-gradient(rgba(20,32,51,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(20,32,51,.04) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:linear-gradient(to bottom,#000 35%,transparent 90%)
+}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(370px,.74fr);
+  gap:7vw;align-items:center;position:relative;z-index:2
+}
+.hero .eyebrow{margin-bottom:28px}
+.role{margin-top:25px;font-size:clamp(1.08rem,1.6vw,1.3rem);font-weight:730;color:var(--navy)}
+.sectors{margin-top:8px;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:790;color:var(--steel)}
+.hero .lead{margin-top:27px}
+.portrait-stage{position:relative;perspective:1500px}
+.orbit{
+  position:absolute;width:116%;aspect-ratio:1;border:1px solid rgba(31,119,180,.18);
+  border-radius:50%;left:-8%;top:-6%;animation:spin 34s linear infinite;pointer-events:none
+}
+.orbit:after{
+  content:"";position:absolute;width:9px;height:9px;background:var(--blue);border-radius:50%;
+  left:50%;top:-5px;box-shadow:0 0 20px rgba(31,119,180,.48)
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.portrait{
+  position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:16px;
+  background:#d5d7d7;border:1px solid rgba(20,32,51,.11);box-shadow:var(--shadow);
+  transform-style:preserve-3d;transition:transform .18s ease-out
+}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 21%}
+.portrait-note{
+  position:absolute;right:-20px;bottom:8%;writing-mode:vertical-rl;
+  text-transform:uppercase;letter-spacing:.2em;font-size:.67rem;color:#78859a
+}
+
+/* focus band */
+.focus{background:linear-gradient(110deg,#06243b 0%,#0a3150 62%,#10476e 100%);color:white;overflow:hidden;position:relative}
+.focus:after{
+  content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;right:-155px;top:-175px;box-shadow:0 0 0 72px rgba(255,255,255,.013)
+}
+.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);position:relative;z-index:2}
+.focus-item{
+  padding:39px 34px;border-right:1px solid rgba(255,255,255,.11);position:relative;overflow:hidden
+}
+.focus-item:last-child{border-right:0}
+.focus-item small{display:block;margin-bottom:9px;color:#93a3bb;text-transform:uppercase;letter-spacing:.14em;font-size:.71rem;font-weight:810}
+.focus-item strong{font-size:clamp(1rem,1.5vw,1.26rem);font-weight:680;letter-spacing:-.02em}
+.focus-item:after{
+  content:"";position:absolute;width:150px;height:150px;border:1px solid rgba(100,165,208,.25);
+  border-radius:50%;right:-100px;bottom:-108px;transition:.5s var(--ease)
+}
+.focus-item:hover:after{transform:scale(2)}
+
+/* profile */
+.profile{background:var(--paper3)}
+.split{display:grid;grid-template-columns:.82fr 1.18fr;gap:9vw;align-items:start}
+.profile-copy p{font-size:1.12rem;line-height:1.72;color:#4f5c6e}
+.profile-copy p+p{margin-top:20px}
+.signal-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--line)
+}
+.signal{padding:21px 18px 4px 0;border-right:1px solid var(--line);position:relative;overflow:hidden}
+.signal:nth-child(2),.signal:last-child{padding-left:19px}
+.signal:last-child{border-right:0}
+.signal strong{display:block;color:var(--navy);margin-bottom:5px}
+.signal span{font-size:.88rem;color:var(--muted)}
+.signal:after{
+  content:"";position:absolute;width:90px;height:90px;border:1px solid rgba(31,119,180,.20);
+  border-radius:50%;right:-78px;bottom:-72px;transition:.44s var(--ease)
+}
+.signal:hover:after{transform:scale(2)}
+
+/* expertise */
+.expertise{
+  background:linear-gradient(180deg,#dfe8ee 0%,#eef3f6 100%);
+}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:50px}
+.section-head .lead{max-width:530px;margin-bottom:4px}
+.expertise-list{border-top:1px solid var(--line)}
+.expertise-row{
+  display:grid;grid-template-columns:80px minmax(220px,.65fr) 1fr 30px;gap:26px;align-items:center;
+  min-height:118px;border-bottom:1px solid var(--line);position:relative;overflow:hidden
+}
+.expertise-row:before{
+  content:"";position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--blue);transition:.46s var(--ease)
+}
+.expertise-row:after{
+  content:"";position:absolute;width:170px;height:170px;border:1px solid rgba(31,119,180,.20);
+  border-radius:50%;right:-190px;top:50%;transform:translateY(-50%);transition:.5s var(--ease)
+}
+.expertise-row:hover:before{width:100%}
+.expertise-row:hover:after{right:-62px}
+.expertise-row .num{font-size:.71rem;color:var(--steel);letter-spacing:.12em}
+.expertise-row .name{font-size:clamp(1.25rem,2vw,1.95rem);font-weight:630;letter-spacing:-.035em;color:var(--navy)}
+.expertise-row .desc{font-size:.95rem;line-height:1.55;color:#5b6879}
+.expertise-row .arrow{color:var(--blue);transition:.25s}
+.expertise-row:hover .arrow{transform:translateX(6px)}
+
+/* approach */
+.approach{background:var(--paper3)}
+.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.system{min-height:510px;position:relative;display:grid;place-items:center}
+.ring{position:absolute;border:1px solid rgba(31,119,180,.20);border-radius:50%}
+.r1{width:205px;height:205px}.r2{width:340px;height:340px}.r3{width:480px;height:480px}
+.core{
+  width:166px;height:166px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:var(--navy);color:white;position:relative;z-index:3;padding:20px;box-shadow:0 18px 45px rgba(20,32,51,.18)
+}
+.node{
+  position:absolute;width:116px;height:116px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:var(--paper3);border:1px solid rgba(20,32,51,.17);font-size:.85rem;font-weight:720;color:var(--navy);
+  transition:.34s var(--ease);z-index:4
+}
+.node:hover{background:white;box-shadow:0 12px 30px rgba(20,32,51,.1)}
+.n1{transform:translate(-175px,-78px)}.n1:hover{transform:translate(-175px,-78px) scale(1.08)}
+.n2{transform:translate(180px,-96px)}.n2:hover{transform:translate(180px,-96px) scale(1.08)}
+.n3{transform:translate(145px,150px)}.n3:hover{transform:translate(145px,150px) scale(1.08)}
+.n4{transform:translate(-155px,160px)}.n4:hover{transform:translate(-155px,160px) scale(1.08)}
+.approach-copy .lead{margin-top:22px}
+.approach-list{margin-top:32px;border-top:1px solid var(--line)}
+.approach-item{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
+.approach-item span{font-size:.71rem;color:var(--steel)}
+.approach-item strong{display:block;color:var(--navy);margin-bottom:4px}
+.approach-item p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* career */
+.career{background:var(--paper)}
+.career-intro{max-width:760px}
+.timeline{margin-top:52px;border-top:1px solid var(--line)}
+.step{
+  display:grid;grid-template-columns:160px 1fr 1.05fr;gap:36px;
+  padding:34px 0;border-bottom:1px solid var(--line);position:relative;overflow:hidden
+}
+.step:after{
+  content:"";position:absolute;width:150px;height:150px;border:1px solid rgba(31,119,180,.18);
+  border-radius:50%;right:-170px;bottom:-110px;transition:.48s var(--ease)
+}
+.step:hover:after{right:-58px;transform:scale(1.3)}
+.step .date{font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--steel);font-weight:760}
+.step h3{color:var(--navy)}
+.step .company{margin-top:7px;color:var(--blue);font-size:.9rem;font-weight:720}
+.step ul{margin:0;padding-left:1.1rem;color:#5a6677}
+.step li+li{margin-top:7px}
+
+/* impact */
+.impact{background:var(--paper2)}
+.impact-list{margin-top:52px;border-top:1px solid var(--line)}
+.impact-row{
+  display:grid;grid-template-columns:82px .85fr 1.15fr;gap:30px;
+  padding:34px 0;border-bottom:1px solid var(--line);position:relative;overflow:hidden
+}
+.impact-row .num{font-size:.71rem;letter-spacing:.12em;color:var(--steel)}
+.impact-row h3{color:var(--navy)}
+.impact-row p{margin:0;color:#5b6778;line-height:1.58}
+.tag{margin-top:12px;display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:var(--blue)}
+.tag:before{content:"";width:19px;height:1px;background:currentColor}
+.impact-row:after{
+  content:"";position:absolute;width:125px;height:125px;border:1px solid rgba(31,119,180,.20);
+  border-radius:50%;right:-142px;bottom:-88px;transition:.45s var(--ease)
+}
+.impact-row:hover:after{right:-54px;transform:scale(1.35)}
+
+/* statement */
+.statement{
+  background:linear-gradient(115deg,#061f34 0%,#0a3150 64%,#10486f 100%);color:white;padding:90px 0;position:relative;overflow:hidden
+}
+.statement:after{
+  content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;right:-220px;top:-300px;box-shadow:0 0 0 85px rgba(255,255,255,.012)
+}
+.statement .lead{color:#aab6c6;margin-top:21px}
+
+/* contact */
+.contact{background:linear-gradient(135deg,#f8fafb,#e2ebf2)}
+.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:78px;align-items:end}
+.contact-panel{padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contact-row{display:flex;justify-content:space-between;gap:22px;padding:16px 0;border-bottom:1px solid rgba(20,32,51,.08)}
+.contact-row:last-child{border-bottom:0}
+.contact-row span{color:var(--muted)}
+.contact-row strong{color:var(--navy)}
+.copy{border:0;background:none;color:var(--blue);font-weight:730;padding:0;cursor:pointer}
+
+footer{padding:28px 0;background:#061b2d;color:#8497a7;font-size:.82rem}
+.footer-inner{display:flex;justify-content:space-between;gap:28px}
+
+@media(max-width:960px){
+  .nav-links{display:none}
+  .menu{display:block}
+  .nav-mail{display:none}
+  .nav-links.open{
+    display:flex;position:absolute;left:20px;right:20px;top:69px;flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(248,250,251,.98);border:1px solid rgba(20,32,51,.1);border-radius:16px;padding:14px 18px;
+    box-shadow:var(--shadow)
+  }
+  .nav-links.open a{padding:12px 4px}
+  .hero-grid,.split,.approach-grid,.contact-grid{grid-template-columns:1fr}
+  .portrait-stage{max-width:620px}
+  .focus-grid{grid-template-columns:1fr}
+  .focus-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.11)}
+  .section-head{display:block}
+  .section-head .lead{margin-top:18px}
+  .expertise-row{grid-template-columns:55px .75fr 1fr 24px}
+  .timeline .step{grid-template-columns:125px 1fr}
+  .step ul{grid-column:2}
+  .impact-row{grid-template-columns:55px 1fr}
+  .impact-row p{grid-column:2}
+}
+@media(max-width:640px){
+  .container{width:min(calc(100% - 28px),var(--max))}
+  .nav-inner{height:70px}
+  .hero{padding-top:116px;min-height:auto}
+  .display{font-size:clamp(3.55rem,18vw,5.6rem)}
+  .section{padding:80px 0}
+  .hero-actions{display:grid;grid-template-columns:1fr}
+  .hero-actions .btn{width:100%}
+  .portrait-note{display:none}
+  .signal-grid{grid-template-columns:1fr}
+  .signal,.signal:nth-child(2),.signal:last-child{padding:17px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .expertise-row{grid-template-columns:38px 1fr 22px;gap:13px;padding:22px 0}
+  .expertise-row .desc{grid-column:2/4}
+  .system{transform:scale(.67);margin:-68px -95px;min-height:470px}
+  .timeline .step{grid-template-columns:1fr;gap:14px}
+  .step ul{grid-column:1}
+  .impact-row{grid-template-columns:38px 1fr;gap:14px}
+  .impact-row p{grid-column:2}
+  .contact-row{display:block}
+  .contact-row span,.contact-row strong{display:block}
+  .contact-row span{margin-bottom:5px}
+  .footer-inner{display:block}
+  .footer-inner span+span{display:block;margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .orbit{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">Robert Dlugosch</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#profile">Profile</a>
+      <a href="#expertise">Stärken</a>
+      <a href="#approach">Approach</a>
+      <a href="#impact">Beispiele</a>
+      <a href="#career">Werdegang</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-mail" href="mailto:c.robert126@gmail.com">Get in touch</a>
+    <button class="menu" id="menu" aria-label="Menü öffnen">☰</button>
+  </div>
+</nav>
+
+<main id="top">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Business Development · Strategic Sales</div>
+      <h1 class="display">Robert<br><span class="thin">Dlugosch</span></h1>
+      <div class="role">Business Development Manager · Sector Lead KRITIS</div>
+      <div class="sectors">KRITIS · Defence · Industry</div>
+      <p class="lead">Ich arbeite dort, wo Märkte erklärungsbedürftig, Entscheidungswege komplex und Vertriebszyklen anspruchsvoll sind – und bringe Struktur in die Frage, wo sich Geschäft sinnvoll entwickeln lässt.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#profile">Profil entdecken ↓</a>
+        <a class="btn" href="#contact">Kontakt aufnehmen ↗</a>
+      </div>
+    </div>
+
+    <div class="portrait-stage reveal" data-delay="1">
+      <div class="orbit"></div>
+      <div class="portrait">
+        <img src="assets/robert-dlugosch.jpg" alt="Professionelles Portrait von Robert Dlugosch">
+      </div>
+      <div class="portrait-note">Executive Sales · Business Development</div>
+    </div>
+  </div>
+</section>
+
+<section class="focus">
+  <div class="container focus-grid">
+    <div class="focus-item reveal"><small>01 · Market</small><strong>Strategic Market Development</strong></div>
+    <div class="focus-item reveal" data-delay="1"><small>02 · Accounts</small><strong>Complex B2B &amp; Buying Centers</strong></div>
+    <div class="focus-item reveal" data-delay="2"><small>03 · Sectors</small><strong>KRITIS · Defence · Industry</strong></div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="section profile" id="profile">
+  <div class="container split">
+    <div class="reveal">
+      <div class="micro">01 · Professional Profile</div>
+      <h2 class="h2" style="margin-top:20px">Commercial clarity in complex B2B environments.</h2>
+    </div>
+    <div class="profile-copy reveal" data-delay="1">
+      <p>Mein Profil verbindet strategisches Business Development mit operativer Vertriebserfahrung. Ich bewege mich sicher zwischen Marktverständnis, anspruchsvollen Kundenstrukturen und der Frage, wie daraus ein belastbarer kommerzieller Ansatz entsteht.</p>
+      <p>Besonders relevant ist für mich die Arbeit in Umfeldern, in denen viele Stakeholder, technische Anforderungen und unterschiedliche Entscheidungslogiken zusammenkommen. Dort liegt meine Stärke darin, Komplexität zu reduzieren, Prioritäten sichtbar zu machen und daraus eine klare Vertriebsrichtung abzuleiten.</p>
+
+      <div class="signal-grid">
+        <div class="signal"><strong>Commercial Judgement</strong><span>Relevanz erkennen · Prioritäten setzen</span></div>
+        <div class="signal"><strong>Stakeholder Navigation</strong><span>Komplexe Organisationen · Entscheidungslogiken</span></div>
+        <div class="signal"><strong>Structured Execution</strong><span>Strategie in belastbare Vertriebsarbeit übersetzen</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section expertise" id="expertise">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="micro">02 · Core Strengths</div>
+        <h2 class="h2" style="margin-top:20px">Four strengths that reinforce each other.</h2>
+      </div>
+      <p class="lead">Meine Stärken liegen nicht in einzelnen Methoden, sondern in der Verbindung von Urteilsvermögen, Kundenverständnis, Positionierung und konsequenter Vertriebsführung.</p>
+    </div>
+
+    <div class="expertise-list">
+      <div class="expertise-row reveal">
+        <div class="num">01</div>
+        <div class="name">Market Judgement</div>
+        <div class="desc">Chancen nicht nur finden, sondern einordnen: Welche Themen sind relevant, wo besteht echter Bedarf und welche Felder verdienen kommerzielle Aufmerksamkeit?</div>
+        <div class="arrow">↗</div>
+      </div>
+
+      <div class="expertise-row reveal">
+        <div class="num">02</div>
+        <div class="name">Stakeholder Navigation</div>
+        <div class="desc">Komplexe Organisationen verstehen, unterschiedliche Interessen einordnen und Vertriebsarbeit an tatsächlichen Entscheidungswegen ausrichten.</div>
+        <div class="arrow">↗</div>
+      </div>
+
+      <div class="expertise-row reveal">
+        <div class="num">03</div>
+        <div class="name">Commercial Positioning</div>
+        <div class="desc">Aus Kundenanforderungen eine klare kommerzielle Relevanz ableiten – damit Angebot, Argumentation und Vertriebsansprache zusammenpassen.</div>
+        <div class="arrow">↗</div>
+      </div>
+
+      <div class="expertise-row reveal">
+        <div class="num">04</div>
+        <div class="name">Sales Discipline</div>
+        <div class="desc">Vertriebsarbeit transparent und steuerbar halten – mit klaren Prozessen, belastbarem Forecasting, sauberem CRM und konsequentem Follow-through.</div>
+        <div class="arrow">↗</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section approach" id="approach">
+  <div class="container approach-grid">
+    <div class="system reveal">
+      <div class="ring r3"></div>
+      <div class="ring r2"></div>
+      <div class="ring r1"></div>
+      <div class="core"><strong>Commercial<br>Opportunity</strong></div>
+      <div class="node n1">Context</div>
+      <div class="node n2">Focus</div>
+      <div class="node n3">Execution</div>
+      <div class="node n4">Relevance</div>
+    </div>
+
+    <div class="approach-copy reveal" data-delay="1">
+      <div class="micro">03 · Approach</div>
+      <h2 class="h2" style="margin-top:20px">Understand first. Focus deliberately. Execute clearly.</h2>
+      <p class="lead">Meine Herangehensweise beginnt nicht mit einer fertigen Vertriebsschablone. Ich versuche zuerst zu verstehen, was im Markt wirklich zählt, wo ein Angebot glaubwürdig anschlussfähig ist und welche nächsten Schritte daraus sinnvoll werden.</p>
+
+      <div class="approach-list">
+        <div class="approach-item"><span>01</span><div><strong>Kontext verstehen</strong><p>Marktsignale, Kundenanforderungen und Rahmenbedingungen aufnehmen, bevor Lösungen oder Vertriebsbotschaften feststehen.</p></div></div>
+        <div class="approach-item"><span>02</span><div><strong>Fokus setzen</strong><p>Aus vielen möglichen Richtungen die Themen und Organisationen priorisieren, bei denen Bedarf, Passung und Potenzial zusammenkommen.</p></div></div>
+        <div class="approach-item"><span>03</span><div><strong>Relevanz herstellen</strong><p>Leistungsangebot und Kundenrealität so zusammenführen, dass eine klare, belastbare Vertriebsargumentation entsteht.</p></div></div>
+        <div class="approach-item"><span>04</span><div><strong>Umsetzung führen</strong><p>Mit klaren nächsten Schritten arbeiten, Rückmeldungen aus dem Markt aufnehmen und Vorgehen, Prozesse oder Angebot dort nachschärfen, wo es nötig ist.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section impact" id="impact">
+  <div class="container">
+    <div class="reveal">
+      <div class="micro">04 · Selected Examples</div>
+      <h2 class="h2" style="margin-top:20px">Three examples of the role I tend to take.</h2>
+      <p class="lead" style="margin-top:24px">Die Beispiele zeigen weniger einzelne Methoden als die Art von Verantwortung, die ich übernehme: Orientierung schaffen, komplexe Kunden entwickeln und Vertriebsarbeit belastbarer machen.</p>
+    </div>
+
+    <div class="impact-list">
+      <div class="impact-row reveal">
+        <div class="num">01</div>
+        <div>
+          <h3 class="h3">Creating Direction in KRITIS</h3>
+          <div class="tag">Market Development</div>
+        </div>
+        <p>Aus einem breiten Themenfeld eine fokussierte Marktbearbeitung entwickeln: relevante Teilmärkte eingrenzen, Kundenbedarf systematisch aufnehmen und daraus eine klare Richtung für Angebot, Kommunikation und Vertrieb ableiten.</p>
+      </div>
+
+      <div class="impact-row reveal">
+        <div class="num">02</div>
+        <div>
+          <h3 class="h3">Navigating Complex Accounts</h3>
+          <div class="tag">Account Development</div>
+        </div>
+        <p>Anspruchsvolle Corporate- und Public-Accounts in unterschiedlichen Branchen eigenständig entwickeln – mit Blick auf Entscheidungswege, relevante Ansprechpartner und die passende kommerzielle Ansprache.</p>
+      </div>
+
+      <div class="impact-row reveal">
+        <div class="num">03</div>
+        <div>
+          <h3 class="h3">Making Sales More Operable</h3>
+          <div class="tag">Sales Operations</div>
+        </div>
+        <p>Vertriebsabläufe zwischen Akquise, Presales, Closing und Customer Success schärfen, CRM-Strukturen mitentwickeln und durch Forecasting und Reporting mehr Transparenz in die operative Steuerung bringen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section career" id="career">
+  <div class="container">
+    <div class="career-intro reveal">
+      <div class="micro">05 · Werdegang</div>
+      <h2 class="h2" style="margin-top:20px">Vom direkten Vertrieb zur strategischen Marktverantwortung.</h2>
+      <p class="lead" style="margin-top:24px">Jede Station hat dem heutigen Profil eine andere Ebene hinzugefügt: Abschlussorientierung, Verantwortung für komplexe Kunden und schließlich die strategische Entwicklung eines Marktsegments.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="step reveal">
+        <div class="date">07/2024 – heute</div>
+        <div>
+          <h3 class="h3">Business Development Manager · Sector Lead KRITIS</h3>
+          <div class="company">ML Consulting Schulung, Service & Support GmbH</div>
+        </div>
+        <ul>
+          <li>Verantwortung für den Aufbau und die Weiterentwicklung des KRITIS-Segments.</li>
+          <li>Verbindung von Marktfeedback, Angebotsentwicklung und kommerzieller Positionierung.</li>
+          <li>Steuerung der Marktbearbeitung von der strategischen Priorität bis zur konkreten Vertriebsansprache.</li>
+        </ul>
+      </div>
+
+      <div class="step reveal">
+        <div class="date">vorherige Funktion</div>
+        <div>
+          <h3 class="h3">Sales Manager</h3>
+          <div class="company">ML Consulting Schulung, Service & Support GmbH</div>
+        </div>
+        <ul>
+          <li>Eigenständige Verantwortung für anspruchsvolle Corporate- und Public-Accounts.</li>
+          <li>Operative Steuerung über Forecast, Reporting und Pipeline sowie Weiterentwicklung interner Vertriebsabläufe.</li>
+          <li>Zusätzliche Verantwortung durch Onboarding, Recruiting-Unterstützung und Vertretung der Vertriebsleitung.</li>
+        </ul>
+      </div>
+
+      <div class="step reveal">
+        <div class="date">04/2023 – 06/2024</div>
+        <div>
+          <h3 class="h3">Recruitment Consultant</h3>
+          <div class="company">Amoria Bond GmbH</div>
+        </div>
+        <ul>
+          <li>Fundament im vollständigen 360°-Sales-Prozess – von der Ansprache bis zum Abschluss.</li>
+          <li>Arbeit mit technischen Mandaten und internationalen Industrie- und Maschinenbaukunden.</li>
+          <li>Frühe Routine in Neukundenentwicklung, Verhandlung und eigenständiger KPI-Verantwortung.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="container reveal">
+    <div class="eyebrow" style="color:#91a6d4">Commercial Principle</div>
+    <h2 class="h2" style="margin-top:22px;max-width:1000px">Good business development reduces uncertainty.</h2>
+    <p class="lead">Je klarer Markt, Kunde und Angebot zueinander passen, desto gezielter kann Vertrieb arbeiten.</p>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="micro">06 · Contact</div>
+      <h2 class="h2" style="margin-top:20px">Interesse an einem Austausch?</h2>
+      <p class="lead" style="margin-top:24px">Offen für Gespräche zu Business Development, strategischem Vertrieb und anspruchsvollen B2B-Märkten.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:c.robert126@gmail.com">E-Mail schreiben ↗</a>
+        <button class="btn" id="copyEmail">E-Mail kopieren</button>
+      </div>
+    </div>
+
+    <div class="contact-panel reveal" data-delay="1">
+      <div class="contact-row"><span>Name</span><strong>Robert Dlugosch</strong></div>
+      <div class="contact-row"><span>E-Mail</span><strong>c.robert126@gmail.com</strong></div>
+      <div class="contact-row"><span>Fokus</span><strong>KRITIS · Defence · Industry</strong></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2026 Robert Dlugosch</span>
+    <span>Business Development · Strategic Sales</span>
+  </div>
+</footer>
+
+<script>
+const $=(s,c=document)=>c.querySelector(s);
+const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+
+const menu=$("#menu");
+const navLinks=$("#navLinks");
+menu.addEventListener("click",()=>navLinks.classList.toggle("open"));
+$$(".nav-links a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+const progress=$("#progress");
+window.addEventListener("scroll",()=>{
+  const d=document.documentElement;
+  progress.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight))*100+"%";
+},{passive:true});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("in");
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.08});
+$$(".reveal").forEach(el=>io.observe(el));
+
+const hero=$(".hero");
+if(matchMedia("(pointer:fine)").matches){
+  hero.addEventListener("pointermove",e=>{
+    const r=hero.getBoundingClientRect();
+    hero.style.setProperty("--mx",(e.clientX-r.left)+"px");
+    hero.style.setProperty("--my",(e.clientY-r.top)+"px");
+  });
+}
+
+const portrait=$(".portrait");
+if(matchMedia("(pointer:fine)").matches){
+  portrait.addEventListener("pointermove",e=>{
+    const r=portrait.getBoundingClientRect();
+    const rx=((e.clientY-r.top)/r.height-.5)*-5;
+    const ry=((e.clientX-r.left)/r.width-.5)*7;
+    portrait.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+  portrait.addEventListener("pointerleave",()=>portrait.style.transform="");
+}
+
+const sectionIds=["profile","expertise","approach","impact","career","contact"];
+const navAnchors=$$(".nav-links a");
+const so=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navAnchors.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));
+    }
+  });
+},{rootMargin:"-42% 0px -48% 0px"});
+sectionIds.forEach(id=>so.observe(document.getElementById(id)));
+
+$("#copyEmail").addEventListener("click",async e=>{
+  const btn=e.currentTarget;
+  try{
+    await navigator.clipboard.writeText("c.robert126@gmail.com");
+    const old=btn.textContent;
+    btn.textContent="E-Mail kopiert ✓";
+    setTimeout(()=>btn.textContent=old,1600);
+  }catch{
+    location.href="mailto:c.robert126@gmail.com";
+  }
+});
+</script>
+</body>
+</html>
